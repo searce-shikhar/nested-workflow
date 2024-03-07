@@ -1,1 +1,13 @@
+name: Github actions OIDC-GCP
+on:
+  workflow_call:
+    inputs:
+      ecr_repository:
+        description: "The name of the ECR repository to deploy to e.g telephony-service"
+        required: true
+        type: string
 
+jobs:
+  deploy:
+    name: Deploy
+    uses: ufonia/workflows/.github/workflows/workflow-docker-build-deploy.yml@v1
