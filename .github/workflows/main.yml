@@ -8,6 +8,9 @@ on:
         type: string
 
 jobs:
-  deploy:
-    name: Deploy
-    uses: ufonia/workflows/.github/workflows/workflow-docker-build-deploy.yml@v1
+  workflow-test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: test echo
+        run: |
+          echo "Hello World!"
